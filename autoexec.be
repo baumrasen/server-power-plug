@@ -192,15 +192,18 @@ class ProxmoxWatchdog
     end
   end
 
-  def push_kuma(status, msg)
+def push_kuma(status, msg)
     if self.kuma_push_url == ""
       return
     end
+    # Falls die URL in config.json bereits "?status=..." enthält, am '?' abschneiden:
+    var base_url = string.split(self.kuma_push_url, "?")[0]
+    
     var wc = webclient()
     wc.set_timeouts(2000, 2000)
     var prefix = self.dry_run ? "DRY_" : ""
     var url = string.format("%s?status=%s&msg=%s%s&ping=%.1f", 
-                            self.kuma_push_url, status, prefix, msg, self.last_power)
+                            base_url, status, prefix, msg, self.last_power)
     wc.begin(url)
     var code = wc.GET()
     wc.close()
