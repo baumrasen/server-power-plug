@@ -43,7 +43,7 @@ Tritt ein erkannter Fehlerzustand dauerhaft auf, eskaliert das Skript in zwei St
 
 ## 📋 Voraussetzungen
 
-1. **Steckdose:** Tasmota-Steckdose mit **ESP32-Chip** (Tasmota32 mit integriertem Berry Scripting und LittleFS-Dateisystem) sowie Energiemessung (z. B. Nous A1T mit ESP32, Shelly Plug S Gen3 o. Ä.).
+1. **Steckdose:** Tasmota-Steckdose mit **ESP32-Chip** (Tasmota32 mit integriertem Berry Scripting und LittleFS-Dateisystem) sowie Energiemessung (z. B. Nous A8T mit ESP32, Shelly Plug S Gen3 (?) o. Ä.).
 2. **Server-BIOS:** Im BIOS/UEFI des Proxmox-Servers muss unter *APM / Power Management* die Option **`Restore on AC Power Loss`** zwingend auf **`Power On`** (Always On) stehen, damit der Server automatisch hochfährt, sobald die Steckdose den Strom wieder einschaltet.
 
 ---
