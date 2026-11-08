@@ -1,0 +1,16 @@
+{
+  "pve_host": "https://192.168.1.100:8006",
+  "pve_node": "pve",
+  "pve_api_token": "PVEAPIToken=root@pam!watchdog=00000000-0000-0000-0000-000000000000",
+  "kuma_push_url": "http://192.168.1.50:3001/api/push/YOUR_UPTIME_KUMA_TOKEN",
+  "git_raw_url": "https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/autoexec.be",
+  "dry_run": true,
+  "check_interval_s": 60,
+  "freeze_min_watts": 75.0,
+  "freeze_max_delta": 3.0,
+  "softoff_watts": 15.0,
+  "soft_threshold": 3,
+  "hard_threshold": 5,
+  "off_time_s": 15,
+  "cooldown_checks": 8
+}
